@@ -4,11 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace DockCompanion
 {
     class ReadStringFromText
     {
+        public static void CheckAndLaunchConfigSetup()
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.txt");
+            if (!File.Exists(filePath))
+            {
+                string configSetupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DockCompanionConfigSetup.exe");
+                if (File.Exists(configSetupPath))
+                {
+                    Process.Start(configSetupPath);
+                }
+                else
+                {
+                    throw new InvalidOperationException("This operation cannot be completed because the expected Config.txt file doesn't exist and the DockCompanionConfigSetup.exe file is missing");
+                }
+            }
+        }
         public static string ReadConfigTextAppName()
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.txt");

@@ -10,6 +10,7 @@ namespace DockCompanion
     {
         static void Main(string[] args)
         {
+            ReadStringFromText.CheckAndLaunchConfigSetup();
             OpenOrActivateWindows.CheckDictionary();
         }
     }
