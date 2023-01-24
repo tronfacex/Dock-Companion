@@ -1,4 +1,5 @@
 # Dock-Companion
+<img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo_with-text.png" width="300" ALIGN="left"></img>
 <strong>Background</strong></br>
 This is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>. It is the first C# application I've ever made that wasn't a Unity project or a tutorial.
 
