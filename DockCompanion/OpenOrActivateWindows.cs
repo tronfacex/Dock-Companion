@@ -36,9 +36,8 @@ namespace DockCompanion
                     if (WindowActivator.IsIconic(windowToActivate.Key))
                     {
                         WindowActivator.ShowWindow(windowToActivate.Key, WindowActivator.SW_RESTORE);
-                        return;
                     }
-                    if (WindowActivator.IsIconic(windowToActivate.Key) == false)
+                    else
                     {
                         //WindowActivator.CheckWindowSize(windowToActivate.Key);
                         //WindowActivator.ShowWindow(windowToActivate.Key, WindowActivator.SW_RESTORE);
