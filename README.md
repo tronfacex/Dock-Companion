@@ -3,21 +3,11 @@
 <strong>Background</strong></br>
 Dock Companion is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>. It is the first C# application I've ever made that wasn't a Unity project or a tutorial.
 
-Links to the StackOverflow threads that form the basis of this project can be found here.
+The StackOverflow threads that form the basis of this project can be found [in the ATTRIBUTIONS file.](ATTRIBUTIONS.md)
 
-The full transcript of my conversation with ChatGPT can be found here.
+The full transcript of my conversation with ChatGPT can be found [here.](https://github.com/tronfacex/Dock-Companion/blob/20cf476de8181917586f40c372f660c0f5a8f16b/ChatGPT%20Transcript%201-24-22.pdf)
 
 This project is published with a GNU General Public License v3.0.
-
-<strong>The StackOverflow threads & ChatGPT transcript that form the basis of this project are below:</strong>
-
-This thread covers the method used to find all open windows and add their window title and handle to a dictionary that can be queried:</br>
-https://stackoverflow.com/questions/7268302/get-the-titles-of-all-open-windows
-
-This was used as the starting point for figuring out the SetForeGroundWindow:</br>
-https://stackoverflow.com/questions/3971512/c-sharp-how-to-select-an-open-application-window
-
-I've added a transcript of my ChatGPT conversation to the project see the file ChatGPT Transcript 1-24-23.pdf.
 
 <strong>Summary</strong></br>
 Dock Companion is a standalone launcher that checks if a specific application is already running, and if it finds an open window (including minimized) of that application it shows the window. If the application is determined to not be running it launches the application. 
