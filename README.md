@@ -1,9 +1,11 @@
 # Dock-Companion
-<img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo_with-text.png" width="300" ALIGN="left"></img>
+<img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo_with-text.png" width="25%" ALIGN="left"></img>
 <strong>Background</strong></br>
-This is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>. It is the first C# application I've ever made that wasn't a Unity project or a tutorial.
+Dock Companion is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>. It is the first C# application I've ever made that wasn't a Unity project or a tutorial.
 
-I believe that due to my inexperience working with things like the System namespace and DLLImport using ChatGPT accelerated my development time greatly. I was able to bounce issues and ideas off the AI to debug my code and learn new things much more quickly.
+Links to the StackOverflow threads that form the basis of this project can be found here.
+
+The full transcript of my conversation with ChatGPT can be found here.
 
 This project is published with a GNU General Public License v3.0.
 
