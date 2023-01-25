@@ -1,7 +1,7 @@
 # Dock-Companion
 <img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo_with-text.png" width="25%" ALIGN="left"></img>
 <strong>Background</strong></br>
-Dock Companion is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>. It is the first C# application I've ever made that wasn't a Unity project or a tutorial.
+Dock Companion is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>.
 
 The StackOverflow threads that form the basis of this project can be found [in the ATTRIBUTIONS file.](ATTRIBUTIONS.md)
 
@@ -12,7 +12,7 @@ This project is published with a GNU General Public License v3.0.
 <strong>Summary</strong></br>
 Dock Companion is a standalone launcher that checks if a specific application is already running, and if it finds an open window (including minimized) of that application it shows the window. If the application is determined to not be running it launches the application. 
 
-This barebones application was made for use with alongside the <a href="https://www.rainmeter.net/">Rainmeter</a> skin <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a>. Using it with Circle Launcher basically adds taskbar-style functionality to applications. See instructions for using it alongside Circle Launcher below.
+This simple application was made for use alongside the <a href="https://www.rainmeter.net/">Rainmeter</a> skin <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a>. Using it with Circle Launcher basically adds taskbar-style functionality to applications. Instructions for initial setup including how to use it with Circle Launcher below.
 
 <strong>Initial Setup</strong></br>
 1. Download latest release .zip file.
