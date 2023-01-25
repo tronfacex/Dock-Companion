@@ -15,7 +15,7 @@ This thread used was the starting point for the OpenOrActivateWindow class. It d
 https://stackoverflow.com/questions/3971512/c-sharp-how-to-select-an-open-application-window
 </li>
 <li>
-The full transcript of my conversation with ChatGPT can be found [here.](https://github.com/tronfacex/Dock-Companion/blob/20cf476de8181917586f40c372f660c0f5a8f16b/ChatGPT%20Transcript%201-24-22.pdf)
+The full transcript of my conversation with ChatGPT can be found <a href="https://github.com/tronfacex/Dock-Companion/blob/881ba92a262608ff2965302b5f3ab4605dc8f214/ChatGPT%20Transcript%201-24-22.pdf">here.</a>
 </li>
 </list>
 
