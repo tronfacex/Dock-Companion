@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using HWND = System.IntPtr;
+using System.Diagnostics;
 
 namespace DockCompanion
 {
@@ -28,6 +29,9 @@ namespace DockCompanion
         [DllImport("USER32.DLL")]
         private static extern IntPtr GetShellWindow();
 
+        [DllImport("user32.dll")]
+        public static extern int GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);
+
         /// <summary>Returns a dictionary that contains the handle and title of all the open windows.</summary>
         /// <returns>A dictionary that contains the handle and title of all the open windows.</returns>
         public static IDictionary<HWND, string> GetOpenWindows()
@@ -37,16 +41,12 @@ namespace DockCompanion
 
             EnumWindows(delegate (HWND hWnd, int lParam)
             {
-                if (hWnd == shellWindow) return true;
                 if (!IsWindowVisible(hWnd)) return true;
 
-                int length = GetWindowTextLength(hWnd);
-                if (length == 0) return true;
-
-                StringBuilder builder = new StringBuilder(length);
-                GetWindowText(hWnd, builder, length + 1);
-
-                windows[hWnd] = builder.ToString();
+                int lpdwProcessId;
+                GetWindowThreadProcessId(hWnd, out lpdwProcessId);
+                var process = Process.GetProcessById(lpdwProcessId);
+                windows[hWnd] = process.ProcessName;
                 return true;
 
             }, 0);

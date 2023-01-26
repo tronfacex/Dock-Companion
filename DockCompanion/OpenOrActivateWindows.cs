@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace DockCompanion
 {
@@ -14,19 +15,14 @@ namespace DockCompanion
         {
             Dictionary<IntPtr, string> windows = (Dictionary<IntPtr, string>)OpenWindowGetter.GetOpenWindows();
 
-            // Use the Where method to filter the dictionary for string and then remove Rainmeter skins and FileExplorer that match
-            var filteredWindows = windows.Where(w => {
-                var processId = 0;
-                var threadId = WindowActivator.GetWindowThreadProcessId(w.Key, out processId);
-                var process = Process.GetProcessById(processId);
-                return w.Value.Contains(ReadStringFromText.ReadConfigTextAppName()) && !w.Value.EndsWith(".ini") && process.ProcessName != "explorer";
-            });
+            // Filters dictionary for windows with a ProcessName that matches the Config.txt Line 1
+            var filteredWindows = windows.Where(w => w.Value.Equals(ReadStringFromText.ProcessName));
 
-            // If no windows match the criteria above then open the application on line 2 of the Config.txt file
+            // If no windows match the criteria above then open the target application from the file path on line 2 of the Config.txt file
             if (!filteredWindows.Any())
             {
                 //Process.Start(@"C:\Program Files\Mozilla Firefox\firefox.exe", "");
-                Process.Start(ReadStringFromText.ReadConfigTextAppLocation(), "");
+                Process.Start(ReadStringFromText.TargetAppLocation, "");
             }
             else
             {
@@ -47,18 +43,16 @@ namespace DockCompanion
                     }
                     else
                     {
-                        //WindowActivator.CheckWindowSize(windowToActivate.Key);
-                        //WindowActivator.ShowWindow(windowToActivate.Key, WindowActivator.SW_RESTORE);
                         WindowActivator.SetForegroundWindow(windowToActivate.Key);
                     }
-                    // Debuggin errors in the Console window
-                    // This could be removed
-                    uint error = WindowActivator.GetLastError();
-                    if (error != 0)
+                    // Debugging errors in the Console window 
+                    /*uint error = WindowActivator.GetLastError();
+                    if (error == 87)
                     {
-                        Console.WriteLine("Error occurred: " + error);
+                        string configSetupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DockCompanionConfigSetup.exe");
+                        Process.Start(configSetupPath);
                     }
-                    Console.WriteLine("Should have opened " + windowToActivate.Value);
+                    Console.WriteLine("Should have opened " + windowToActivate.Value);*/
                 }
             }
         }

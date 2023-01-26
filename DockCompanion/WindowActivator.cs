@@ -15,25 +15,24 @@ namespace DockCompanion
         public const int SW_RESTORE = 9;
         public const int WS_MINIMIZE = 0x20000000;
         [DllImport("user32.dll")]
-        public static extern int GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);
-        [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
         [DllImport("user32.dll")]
         public static extern bool IsWindow(IntPtr hWnd);
         [DllImport("user32.dll")]
         public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-        [DllImport("kernel32.dll")]
-        public static extern uint GetLastError();
         [DllImport("user32.dll")]
         public static extern bool IsIconic(IntPtr hWnd);
 
         [DllImport("user32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool GetWindowPlacement(IntPtr hWnd, ref WINDOWPLACEMENT lpwndpl);
-
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool SetWindowPlacement(IntPtr hWnd, [In] ref WINDOWPLACEMENT lpwndpl);
+
+        // Needed only for debugging errors in the console window
+        /*[DllImport("kernel32.dll")]
+        public static extern uint GetLastError();*/
 
         [StructLayout(LayoutKind.Sequential)]
         public struct WINDOWPLACEMENT
@@ -50,7 +49,6 @@ namespace DockCompanion
             WINDOWPLACEMENT placement = new WINDOWPLACEMENT();
             placement.length = Marshal.SizeOf(placement);
             GetWindowPlacement(hWnd, ref placement);
-            //ShowWindow(hWnd, WindowActivator.SW_SHOW);
             SetWindowPlacement(hWnd, ref placement);
         }
 
