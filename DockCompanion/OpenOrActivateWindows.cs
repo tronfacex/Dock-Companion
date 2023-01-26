@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace DockCompanion
 {
@@ -46,9 +47,10 @@ namespace DockCompanion
                     }
                     // Debugging errors in the Console window 
                     /*uint error = WindowActivator.GetLastError();
-                    if (error != 0)
+                    if (error == 87)
                     {
-                        Console.WriteLine("Error occurred: " + error);
+                        string configSetupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DockCompanionConfigSetup.exe");
+                        Process.Start(configSetupPath);
                     }
                     Console.WriteLine("Should have opened " + windowToActivate.Value);*/
                 }
