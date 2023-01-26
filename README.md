@@ -5,7 +5,7 @@ Dock Companion is a small Windows console application I built using two blocks o
 
 The StackOverflow threads that form the starting point of this project can be found [in the ATTRIBUTIONS file.](ATTRIBUTIONS.md)
 
-The full transcript of my conversation with ChatGPT can be found [here.](https://github.com/tronfacex/Dock-Companion/blob/20cf476de8181917586f40c372f660c0f5a8f16b/ChatGPT%20Transcript%201-24-22.pdf)
+The full transcript of my conversation with ChatGPT can be found [here.](ChatGPT-Transcript-1-26-22.pdf)
 
 This project is published with a GNU General Public License v3.0.
 
