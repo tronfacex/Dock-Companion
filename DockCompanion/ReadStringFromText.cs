@@ -11,10 +11,13 @@ namespace DockCompanion
     /// <summary>Contains various methods for reading from the Config.txt file.</summary>
     class ReadStringFromText
     {
+        public static string ProcessName;
+        public static string TargetAppLocation;
+        private static string configFilePath;
         public static void CheckAndLaunchConfigSetup()
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.txt");
-            if (!File.Exists(filePath))
+            configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.txt");
+            if (!File.Exists(configFilePath))
             {
                 string configSetupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DockCompanionConfigSetup.exe");
                 if (File.Exists(configSetupPath))
@@ -26,6 +29,29 @@ namespace DockCompanion
                     throw new InvalidOperationException("This operation cannot be completed because the expected Config.txt file doesn't exist and the DockCompanionConfigSetup.exe file is missing");
                 }
             }
+        }
+
+        public static void ReadConfigSettings()
+        {
+            //string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.txt");
+            /*if (!File.Exists(filePath))
+            {
+                Console.WriteLine("File not found " + filePath);
+                throw new InvalidOperationException("This operation cannot be completed because the expected Config.txt file doesn't exist");
+                //throw a dialog box and then open the WindowFinder app to make a new Congif.txt file
+            }*/
+            try
+            {
+                string searchString = File.ReadAllText(configFilePath);
+            }
+            catch (UnauthorizedAccessException e)
+            {
+                Console.WriteLine("No permission to access file: " + configFilePath);
+                throw new InvalidOperationException("This operation cannot be completed because the application does not have read access to the Config.txt file");
+            }
+            string[] lines = File.ReadAllLines(configFilePath);
+            ProcessName = lines[0];
+            TargetAppLocation = lines[1];
         }
         public static string ReadConfigTextAppName()
         {

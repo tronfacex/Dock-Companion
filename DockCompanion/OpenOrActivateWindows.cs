@@ -10,18 +10,26 @@ namespace DockCompanion
 {
     public static class OpenOrActivateWindows
     {
+        static string processName;
+        static string appLocation;
+
+        private static void StoreConfigSettings()
+        {
+
+        }
         public static void CheckDictionary()
         {
             Dictionary<IntPtr, string> windows = (Dictionary<IntPtr, string>)OpenWindowGetter.GetOpenWindows();
 
             // Filters dictionary for windows with a ProcessName that matches the Config.txt Line 1
-            var filteredWindows = windows.Where(w => w.Value.Equals(ReadStringFromText.ReadConfigTextAppName()));
+            var filteredWindows = windows.Where(w => w.Value.Equals(ReadStringFromText.ProcessName));
 
             // If no windows match the criteria above then open the application on line 2 of the Config.txt file
             if (!filteredWindows.Any())
             {
                 //Process.Start(@"C:\Program Files\Mozilla Firefox\firefox.exe", "");
-                Process.Start(ReadStringFromText.ReadConfigTextAppLocation(), "");
+                //Process.Start(ReadStringFromText.ReadConfigTextAppLocation(), "");
+                Process.Start(ReadStringFromText.TargetAppLocation, "");
             }
             else
             {
