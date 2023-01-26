@@ -57,6 +57,15 @@ namespace DockCompanion
 
             return windows;
         }
+
+        /*public static IDictionary<HWND, string> GetProcessNameOfWindows()
+        {
+            foreach (var window in GetOpenWindows())
+            {
+                string windowTitle = window.Value.ToString(); 
+                window.Value = 
+            }
+        }*/
     }
 }
 

@@ -14,13 +14,17 @@ namespace DockCompanion
         {
             Dictionary<IntPtr, string> windows = (Dictionary<IntPtr, string>)OpenWindowGetter.GetOpenWindows();
 
+            //var filteredWindows = 
+
             // Use the Where method to filter the dictionary for string and then remove Rainmeter skins and FileExplorer that match
-            var filteredWindows = windows.Where(w => {
+            /*var filteredWindows = windows.Where(w =>
+            {
                 var processId = 0;
-                var threadId = WindowActivator.GetWindowThreadProcessId(w.Key, out processId);
+                var threadId = OpenWindowGetter.GetWindowThreadProcessId(w.Key, out processId);
                 var process = Process.GetProcessById(processId);
                 return w.Value.Contains(ReadStringFromText.ReadConfigTextAppName()) && !w.Value.EndsWith(".ini") && process.ProcessName != "explorer";
-            });
+            });*/
+            var filteredWindows = windows.Where(w => w.Value.EndsWith("," + ReadStringFromText.ReadConfigTextAppName()));
 
             // If no windows match the criteria above then open the application on line 2 of the Config.txt file
             if (!filteredWindows.Any())
