@@ -36,11 +36,11 @@ This application was made for use alongside the <a href="https://www.rainmeter.n
 4. Load or refresh the Circle Launcher skin for the application in Rainmeter.
 
 
-</br></br><strong>Debugging tool</strong></br></br>
-There are two primary reasons why Dock Companion are mismatched Process Name or an invalid filepath in the Config.txt file. Both issues can be solved using the Debug tool.
+</br></br><strong>Debugging Issues</strong></br></br>
+There are two primary reasons why Dock Companion fails: a mismatched Process Name or an invalid filepath in the Config.txt file. Both issues can be solved using the Debug tool.
 
 <strong>Mismatched Process Name</strong></br></br>
-Dock Companion assumes an application's Process Name will be based on the programs exe filename. There are some cases where the Process Name does not match the exe filename. In those cases Dock Companion will fail to find open windows of the target application. Solve this issue by using the Debug tool to find the true Process Name for a given window and override the original Config.txt file.</br></br> Follow these instructions to Debug the Config.txt:
+Dock Companion assumes an application's Process Name based on the program's exe filename. There are some cases where the Process Name does not match the exe filename. In those cases Dock Companion will fail to find open windows of the target application. Solve this issue by using the Debug tool to find the true Process Name for a given window and override the original Config.txt file.</br></br> Follow these instructions to Debug the Config.txt:
 1. Navigate to the Dock Companion folder and open DockCompanionConfigSetup.exe.
 2. Click "Debug" at the bottom of the window. The debug window will open.
 3. Open an instance of the target application.
@@ -50,7 +50,13 @@ Dock Companion assumes an application's Process Name will be based on the progra
 7. Click "Save"
 
 <strong>Invalid Target Application Filepath</strong></br></br>
-If nothing seems to be happening when you run DockCompanion.exe without any open target applcation windows, but still finds and maximizes open windows of the target application it indicates that should delete Config.txt and run the setup again. Alternatively, open Config.txt and examine the filepath on line 2 to ensure it is valid.</br></br>Follow these instructions to Debug the Config.txt via the Debug Tool:
+If no target application windows are launched when DockCompanion.exe is run without open target applcation windows it indicates that the target application filepath doesn't exist. Delete Config.txt and run the initial setup again. 
+
+Alternatively, open Config.txt and examine the filepath on line 2 to ensure it is a valid.
+
+The Debug Tool can also be used to reset the filepath and set an alternative Process Name. 
+
+Follow these instructions to Debug the Config.txt via the Debug Tool:
 1. Navigate to the Dock Companion folder and open DockCompanionConfigSetup.exe.
 2. Click "Debug" at the bottom of the window. The debug window will open.
 3. Open an instance of the target application.
