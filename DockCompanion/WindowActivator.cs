@@ -15,8 +15,6 @@ namespace DockCompanion
         public const int SW_RESTORE = 9;
         public const int WS_MINIMIZE = 0x20000000;
         [DllImport("user32.dll")]
-        public static extern int GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);
-        [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
         [DllImport("user32.dll")]
         public static extern bool IsWindow(IntPtr hWnd);
