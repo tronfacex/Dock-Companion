@@ -1,7 +1,7 @@
 # Dock-Companion
-<img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo-Text.png" width="25%" ALIGN="left"></img>
+<img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo-Text.png" width="27%" ALIGN="left"></img>
 <strong>Background</strong></br>
-Dock Companion is a small Windows console application I built using two blocks of code from StackOverflow and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>.
+Dock Companion is a Windows console application I built using two blocks of code from StackOverflow as a starting point, and a conversation with <a href="https://openai.com/blog/chatgpt/"> OpenAI's ChatGPT</a>.
 
 The StackOverflow threads that form the starting point of this project can be found [in the ATTRIBUTIONS file.](ATTRIBUTIONS.md)
 
@@ -10,13 +10,13 @@ The full transcript of my conversation with ChatGPT can be found [here.](ChatGPT
 This project is published with a GNU General Public License v3.0.
 
 <strong>Summary</strong></br>
-Dock Companion is a C# console application that checks if a target application is already running, and if it finds an open window (including minimized) of the target application it shows the window. If the target application is determined to not be running it launches a new window of the target application. 
+Dock Companion is a C# console application that checks if a target application is already running, and if it finds an open window (including minimized) it shows the window. If the target application is determined to not be running it launches a new window. 
 
 This application was made for use alongside the <a href="https://www.rainmeter.net/">Rainmeter</a> skin <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a>. Using it with Circle Launcher basically adds taskbar-style functionality to applications. Instructions for initial setup including how to use it with Circle Launcher below.
 
 <strong>Initial Setup</strong></br>
 1. Download latest release .zip file.
-2. Ensure that you have .Net Framework 4.8 runtime installed - <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer">Click here to download official Microsoft installer</a>.
+2. Ensure that you have .Net Framework 4.8 runtime installed. <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer"> Click here to download official Microsoft installer</a>.
 3. Unzip the zip file in your preferred file location on your machine.
 4. Run DockCompanion.exe.
 5. On initial launch the application will open a window that helps you create a Config.txt file. 
@@ -35,10 +35,22 @@ This application was made for use alongside the <a href="https://www.rainmeter.n
 3. Set the reference to DockCompanion.exe in Circle Launcher's Variables.inc file.
 4. Load or refresh the Circle Launcher skin for the application in Rainmeter.
 
-<strong>Debugging tool</strong></br>
-Dock Companion makes an educated guess what an application's Process Name will be based on the programs exe filename. There are some cases where the Process Name does not match the exe filename. 
 
-In those cases Dock Companion will fail to find open windows of the target application. You can solve this by using the Debug tool to find the true Process Name for a given window and to override the original Config.txt file. Follow these instructions to Debug the Config.txt:
+</br></br><strong>Debugging tool</strong></br></br>
+There are two primary reasons why Dock Companion are mismatched Process Name or an invalid filepath in the Config.txt file. Both issues can be solved using the Debug tool.
+
+<strong>Mismatched Process Name</strong></br></br>
+Dock Companion assumes an application's Process Name will be based on the programs exe filename. There are some cases where the Process Name does not match the exe filename. In those cases Dock Companion will fail to find open windows of the target application. Solve this issue by using the Debug tool to find the true Process Name for a given window and override the original Config.txt file.</br></br> Follow these instructions to Debug the Config.txt:
+1. Navigate to the Dock Companion folder and open DockCompanionConfigSetup.exe.
+2. Click "Debug" at the bottom of the window. The debug window will open.
+3. Open an instance of the target application.
+4. Return to the debug window and click "Find Windows".
+5. Look through the list of open windows and double click the entry for the target application. This will add the true Process Name to the Process Name field.
+6. Click "Browse..." and navigate to the target application exe file.
+7. Click "Save"
+
+<strong>Invalid Target Application Filepath</strong></br></br>
+If nothing seems to be happening when you run DockCompanion.exe without any open target applcation windows, but still finds and maximizes open windows of the target application it indicates that should delete Config.txt and run the setup again. Alternatively, open Config.txt and examine the filepath on line 2 to ensure it is valid.</br></br>Follow these instructions to Debug the Config.txt via the Debug Tool:
 1. Navigate to the Dock Companion folder and open DockCompanionConfigSetup.exe.
 2. Click "Debug" at the bottom of the window. The debug window will open.
 3. Open an instance of the target application.
