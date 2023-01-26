@@ -41,16 +41,12 @@ namespace DockCompanion
 
             EnumWindows(delegate (HWND hWnd, int lParam)
             {
-                if (hWnd == shellWindow) return true;
                 if (!IsWindowVisible(hWnd)) return true;
 
-                int length = GetWindowTextLength(hWnd);
-                if (length == 0) return true;
-
-                StringBuilder builder = new StringBuilder(length);
-                GetWindowText(hWnd, builder, length + 1);
-
-                windows[hWnd] = builder.ToString();
+                int lpdwProcessId;
+                GetWindowThreadProcessId(hWnd, out lpdwProcessId);
+                var process = Process.GetProcessById(lpdwProcessId);
+                windows[hWnd] = process.ProcessName;
                 return true;
 
             }, 0);

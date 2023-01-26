@@ -14,17 +14,8 @@ namespace DockCompanion
         {
             Dictionary<IntPtr, string> windows = (Dictionary<IntPtr, string>)OpenWindowGetter.GetOpenWindows();
 
-            //var filteredWindows = 
-
-            // Use the Where method to filter the dictionary for string and then remove Rainmeter skins and FileExplorer that match
-            /*var filteredWindows = windows.Where(w =>
-            {
-                var processId = 0;
-                var threadId = OpenWindowGetter.GetWindowThreadProcessId(w.Key, out processId);
-                var process = Process.GetProcessById(processId);
-                return w.Value.Contains(ReadStringFromText.ReadConfigTextAppName()) && !w.Value.EndsWith(".ini") && process.ProcessName != "explorer";
-            });*/
-            var filteredWindows = windows.Where(w => w.Value.EndsWith("," + ReadStringFromText.ReadConfigTextAppName()));
+            // Filters dictionary for windows with a ProcessName that matches the Config.txt Line 1
+            var filteredWindows = windows.Where(w => w.Value.Equals(ReadStringFromText.ReadConfigTextAppName()));
 
             // If no windows match the criteria above then open the application on line 2 of the Config.txt file
             if (!filteredWindows.Any())
@@ -51,18 +42,16 @@ namespace DockCompanion
                     }
                     else
                     {
-                        //WindowActivator.CheckWindowSize(windowToActivate.Key);
-                        //WindowActivator.ShowWindow(windowToActivate.Key, WindowActivator.SW_RESTORE);
                         WindowActivator.SetForegroundWindow(windowToActivate.Key);
                     }
                     // Debuggin errors in the Console window
                     // This could be removed
-                    uint error = WindowActivator.GetLastError();
+                    /*uint error = WindowActivator.GetLastError();
                     if (error != 0)
                     {
                         Console.WriteLine("Error occurred: " + error);
                     }
-                    Console.WriteLine("Should have opened " + windowToActivate.Value);
+                    Console.WriteLine("Should have opened " + windowToActivate.Value);*/
                 }
             }
         }
