@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using HWND = System.IntPtr;
+using System.Diagnostics;
 
 namespace DockCompanion
 {
