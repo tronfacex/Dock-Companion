@@ -11,6 +11,23 @@ namespace DockCompanion
     /// <summary>Contains functionality to get all the open windows. This class is basically pulled directly from an answer on StackOverflow post https://stackoverflow.com/questions/7268302/get-the-titles-of-all-open-windows </summary>
     public static class OpenWindowGetter
     {
+        private delegate bool EnumWindowsProc(HWND hWnd, int lParam);
+
+        [DllImport("USER32.DLL")]
+        private static extern bool EnumWindows(EnumWindowsProc enumFunc, int lParam);
+
+        [DllImport("USER32.DLL")]
+        private static extern int GetWindowText(HWND hWnd, StringBuilder lpString, int nMaxCount);
+
+        [DllImport("USER32.DLL")]
+        private static extern int GetWindowTextLength(HWND hWnd);
+
+        [DllImport("USER32.DLL")]
+        private static extern bool IsWindowVisible(HWND hWnd);
+
+        [DllImport("USER32.DLL")]
+        private static extern IntPtr GetShellWindow();
+
         /// <summary>Returns a dictionary that contains the handle and title of all the open windows.</summary>
         /// <returns>A dictionary that contains the handle and title of all the open windows.</returns>
         public static IDictionary<HWND, string> GetOpenWindows()
@@ -36,23 +53,6 @@ namespace DockCompanion
 
             return windows;
         }
-
-        private delegate bool EnumWindowsProc(HWND hWnd, int lParam);
-
-        [DllImport("USER32.DLL")]
-        private static extern bool EnumWindows(EnumWindowsProc enumFunc, int lParam);
-
-        [DllImport("USER32.DLL")]
-        private static extern int GetWindowText(HWND hWnd, StringBuilder lpString, int nMaxCount);
-
-        [DllImport("USER32.DLL")]
-        private static extern int GetWindowTextLength(HWND hWnd);
-
-        [DllImport("USER32.DLL")]
-        private static extern bool IsWindowVisible(HWND hWnd);
-
-        [DllImport("USER32.DLL")]
-        private static extern IntPtr GetShellWindow();
     }
 }
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DockCompanion
 {
+    //<summary>This class contains a method for retrieving all open Window titles and keys and writes them to the console</summary>
     class RetrieveWindowHandles
     {
         public static void GetWindowHandles()

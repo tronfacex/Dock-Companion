@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 namespace DockCompanion
 {
+    /// <summary>Contains various methods for reading from the Config.txt file.</summary>
     class ReadStringFromText
     {
         public static void CheckAndLaunchConfigSetup()
