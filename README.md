@@ -2,19 +2,25 @@
 
 <img src="https://github.com/tronfacex/Dock-Companion/blob/master/DC-Logo-Text.png" width="27%" ALIGN="left"></img>
 
-<h2 id="background">Background</h2>
-Dock Companion is a Windows console application I built using two blocks of code from StackOverflow as a starting point, and a conversation with <a href="https://openai.com/"> OpenAI's ChatGPT</a>.</br></br>
+<h2 id="about">About</h2>
+Dock Companion is a C# console application that checks if a target application is already running, and if it finds an open window (including minimized) it shows the window. If the target application is determined to not be running it launches a new window.</br></br>
 
-The StackOverflow threads that form the starting point of this project can be found [ATTRIBUTIONS file.](ATTRIBUTIONS.md)
+This application was made for use alongside the <a href="https://www.rainmeter.net/">Rainmeter</a> skin <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a>. Using it with Circle Launcher basically adds taskbar-style functionality to applications. Instructions for initial setup including how to use it with Circle Launcher are below.
+
+Dock Companion was created by adapting two blocks of code found on StackOverflow, and a conversation with <a href="https://openai.com/"> OpenAI's ChatGPT</a>.</br>
+
+The StackOverflow threads that form the starting point of this project can be found in the [ATTRIBUTIONS file.](ATTRIBUTIONS.md)
 
 The full transcript of my conversation with ChatGPT can be found [here.](ChatGPT-Transcript-1-26-22.pdf)
 
 This project is published with a GNU General Public License v3.0.
 
-<h2 id="summary">Summary</h2>
-Dock Companion is a C# console application that checks if a target application is already running, and if it finds an open window (including minimized) it shows the window. If the target application is determined to not be running it launches a new window. 
-
-This application was made for use alongside the <a href="https://www.rainmeter.net/">Rainmeter</a> skin <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a>. Using it with Circle Launcher basically adds taskbar-style functionality to applications. Instructions for initial setup including how to use it with Circle Launcher below.
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+    <li><a href="#initial-setup">Initial Setup</a></li>
+    <li><a href="#how-to-use-alongside-circle-launcher">How to Use With Rainmeter Circle Launcher</a></li>
+    <li><a href="#debugging-issues">Debugging Issues</a></li>
+</ul>
 
 <h2 id="initial-setup">Initial Setup</h2>
 <ol>
