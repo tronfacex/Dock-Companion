@@ -7,11 +7,11 @@ Dock Companion is a C# console application that checks if a target application i
 
 This application was made for use alongside popular <a href="https://www.rainmeter.net/">Rainmeter</a> Docks. Using it alongside Rainmeter docks like <a href="https://visualskins.com/skin/silmeria-dock">Silmeria Dock</a>, <a href="https://visualskins.com/skin/docker">Docker</a> and <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a> basically adds taskbar-style functionality to the targeted applications. 
 
-For example, when targeted at Chrome or Firefox those application will find and surface any already open windows instead of opening a brand new window each time they are clicked. See Dock Companion in action with Silmeria Dock in the gif below:
+For example, when targeted at Chrome or Firefox those applications will find and surface any already open windows instead of opening a brand new window each time they are clicked. 
 
-<img src="https://github.com/tronfacex/Dock-Companion/blob/e0ca64608c5ae2028ed3b6455a88020985046101/Silmeria-After-final2.gif" width="50%" align="center">
+<a href="https://youtu.be/tDhjnqq4pOI" target="_blank">See Dock Companion in action with Silmeria Dock on Youtube.</a>
 
-</br><strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
+<strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
 
 This project is published with a GNU General Public License v3.0.
 
@@ -22,7 +22,7 @@ This project is published with a GNU General Public License v3.0.
     <li><a href="#how-to-use-alongside-circle-launcher">How to Use With Rainmeter Circle Launcher</a></li>
     <li><a href="#how-to-use-alongside-docker">How to Use with Rainmeter Docker</a></li>
     <li><a href="#debugging-issues">Debugging Issues</a></li>
-    <li><a href="footnotes">Notes</a></li>
+    <li><a href="#notes">Notes</a></li>
 </ul>
 
 <h2 id="initial-setup">Initial Setup</h2>
@@ -133,7 +133,7 @@ Follow these instructions to Debug the Config.txt via the Debug Tool:
   <li>Click "Save"</li>
 </ol></p>
 
-<h2 id="footnote">Notes</h2>
+<h2 id="notes">Notes</h2>
 <p>Dock Companion was created by adapting two blocks of code found on StackOverflow, and a conversation with <a href="https://openai.com/"> OpenAI's ChatGPT</a>.</p>
 
 The StackOverflow threads that form the starting point of this project can be found in the [ATTRIBUTIONS file.](ATTRIBUTIONS.md)
