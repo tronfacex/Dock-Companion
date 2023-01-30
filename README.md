@@ -9,9 +9,13 @@ This application was made for use alongside popular <a href="https://www.rainmet
 
 For example, when targeted at Chrome or Firefox those application will find and surface any already open windows instead of opening a brand new window each time they are clicked. 
 
-Using Dock Companion with Firefox on Silmeria Dock:
+Before Dock Companion:
 
-![Silmeria After GIF](Silmeria-After.gif)
+![Silmeria Before GIF](Silmeria-Before-final.gif)
+
+After Dock Companion:
+
+![Silmeria Before GIF](Silmeria-After-final.gif)
 
 <strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
 
