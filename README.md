@@ -7,12 +7,11 @@ Dock Companion is a C# console application that checks if a target application i
 
 This application was made for use alongside popular <a href="https://www.rainmeter.net/">Rainmeter</a> Docks. Using it alongside Rainmeter docks like <a href="https://visualskins.com/skin/silmeria-dock">Silmeria Dock</a>, <a href="https://visualskins.com/skin/docker">Docker</a> and <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a> basically adds taskbar-style functionality to the targeted applications. 
 
-For example, when targeted at Chrome or Firefox those application will find and surface any already open windows instead of opening a brand new window each time they are clicked. 
+For example, when targeted at Chrome or Firefox those application will find and surface any already open windows instead of opening a brand new window each time they are clicked. See Dock Companion in action with Silmeria Dock in the gif below:
 
-<p><img src="https://github.com/tronfacex/Dock-Companion/blob/6bf513ab7b4617a3eb8371102b57e7c0a71e7642/SilmeriaAfter-final.gif" width="33%" align="center"></p>
+<img src="https://github.com/tronfacex/Dock-Companion/blob/e0ca64608c5ae2028ed3b6455a88020985046101/Silmeria-After-final2.gif" width="50%" align="center">
 
-
-<strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
+</br><strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
 
 This project is published with a GNU General Public License v3.0.
 
