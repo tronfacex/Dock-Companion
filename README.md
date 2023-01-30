@@ -9,13 +9,11 @@ This application was made for use alongside popular <a href="https://www.rainmet
 
 For example, when targeted at Chrome or Firefox those application will find and surface any already open windows instead of opening a brand new window each time they are clicked. 
 
-Before Dock Companion:
+<div style="display:flex;">
+  <p>Before Dock Companion:</br><img src="https://github.com/tronfacex/Dock-Companion/blob/9e7dbf0283be1ef114564b02d6cf264e66275fd6/SilmeriaAfter-final.gif" width="33%" align="center"></p>
+  <p>After Dock Companion:</br><img src="https://github.com/tronfacex/Dock-Companion/blob/9e7dbf0283be1ef114564b02d6cf264e66275fd6/SilmeriaAfter-final.gif" width="33%" align="center"></p>
+</div>
 
-![Silmeria Before GIF](SilmeriaBefore-final.gif)
-
-After Dock Companion:
-
-![Silmeria Before GIF](SilmeriaAfter-final.gif)
 
 <strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
 
