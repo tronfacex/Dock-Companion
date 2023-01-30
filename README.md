@@ -11,11 +11,11 @@ For example, when targeted at Chrome or Firefox those application will find and 
 
 Before Dock Companion:
 
-![Silmeria Before GIF](Silmeria-Before-final.gif)
+![Silmeria Before GIF](SilmeriaBefore-final.gif)
 
 After Dock Companion:
 
-![Silmeria Before GIF](Silmeria-After-final.gif)
+![Silmeria Before GIF](SilmeriaAfter-final.gif)
 
 <strong>Instructions for initial setup including how to use it with the most <a href="https://visualskins.com/rainmeter-docks">popular Rainmeter docks</a> are below.</strong>
 
