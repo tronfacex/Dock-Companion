@@ -35,6 +35,7 @@ This project is published with a GNU General Public License v3.0.
     <li>Click the "Browse..." button and navigate to the target application's exe file and click "OK". For instance, Mozilla Firefox usually has a default filepath of <strong>C:\Program Files\Mozilla Firefox\firefox.exe</strong>.</li>
     <li>Click "Save".</li>
     <li>Now use this instance of DockCompanion.exe to launch the target application instead of the target application .exe file.</li>
+    </br><img src="https://github.com/tronfacex/DockCompanionConfigSetup/blob/0975d9f25253bd36134f452b52405b67655a8eee/DC-Initial-Setup-Window.png" width="35%" align="center"></img></br>
 </ol>
 
 <h2 id="how-to-use-alongside-silmeria">How to Use Alongside Silmeria Dock</h2>
