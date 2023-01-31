@@ -7,7 +7,7 @@ Dock Companion is a C# console application that checks if a target application i
 
 This application was made for use alongside popular <a href="https://www.rainmeter.net/">Rainmeter</a> Docks. Using it alongside Rainmeter docks like <a href="https://visualskins.com/skin/silmeria-dock">Silmeria Dock</a>, <a href="https://visualskins.com/skin/docker">Docker</a> and <a href="https://visualskins.com/skin/circle-launcher">Circle Launcher</a> basically adds taskbar-style functionality to the targeted applications. 
 
-For example, when targeted at Chrome or Firefox those applications will find and surface any already open windows instead of opening a brand new window each time they are clicked. 
+For example, when targeted at Chrome or Firefox those applications will find and surface any already open windows instead of opening a brand new window each time they are clicked from the dock. 
 
 <a href="https://youtu.be/xzfQBbNfqNo">See Dock Companion in action with Silmeria Dock on Youtube.</a>
 
